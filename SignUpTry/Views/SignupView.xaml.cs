@@ -1,11 +1,14 @@
+using SignUpTry.ViewModels;
+
 namespace SignUpTry.Views;
 
 public partial class SignupView : ContentPage
 {
-	public SignupView( SignupView vm)
+    SignupViewModel _signupView;
+	public SignupView(SignupViewModel vm)
 	{
+		_signupView = vm;
 		InitializeComponent();
-
-		BindingContext = vm;
+		BindingContext = _signupView;
 	}
 }
